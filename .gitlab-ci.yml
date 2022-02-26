@@ -1,0 +1,31 @@
+image: node:14
+
+
+stages:
+  - setup
+  - code_quality
+
+  dependencies:installation:
+    stage: setup
+    cache:
+      paths:
+        - node_modules/
+    script:
+      - npm i --silent
+    tags:
+      - web-ci
+
+  lint:scripts:
+    stage: code_quality
+    cache:
+      paths:
+      - node_modules/
+    script:
+      - npm run lint
+    only:
+      changes:
+        - src/**/*.{js}
+    tags:
+      - web-ci
+  
+
