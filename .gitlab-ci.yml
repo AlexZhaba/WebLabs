@@ -12,7 +12,7 @@ dependencies:installation:
   script:
     - npm i --silent
   tags:
-    - web-ci
+    - gitlab-org
 
 lint:scripts:
   stage: code_quality
@@ -25,6 +25,6 @@ lint:scripts:
     changes:
       - src/**/*.{js}
   tags:
-    - web-ci
+    - gitlab-org
   
 
