@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #2a2a2a;
+  font-family: "Open Sans";
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
+  -ms-grid-rows: 70px 1fr 70px;
+      grid-template-rows: 70px 1fr 70px;
+  min-height: 100vh;
+  color: #FFF;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  border-bottom: 1px solid orange;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template: 1fr / 1fr 3fr;
+}
+
+.header__title {
+  color: orange;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.header__lab-name {
+  font-size: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr auto 1fr;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.main__form {
+  margin-top: 50px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main__aside {
+  border-left: 1px solid orange;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__gallery {
+  border-top: 1px solid orange;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  padding: 0 200px;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  height: 1000px;
+      grid-template-areas: "image1 image1 image2" "image1 image1 image3" "image4 image4 image4" "image4 image4 image4";
+}
+
+.gallery__image--1 {
+  background-image: url("https://s1.1zoom.me/big3/147/Waterfalls_Summer_Rivers_Rays_of_light_563524_2800x1874.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: image1;
+}
+
+.gallery__image--2 {
+  background-image: url("https://images7.alphacoders.com/423/thumb-1920-423250.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: image2;
+}
+
+.gallery__image--3 {
+  background-image: url("https://www.culture.ru/storage/images/34a20c3ceeb456e7225316a0c05902e9/1a088b633c9a35946b82f904b8f7dfc5.jpeg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: image3;
+}
+
+.gallery__image--4 {
+  background-image: url("https://data.whicdn.com/images/242084377/original.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: image4;
+}
+
+.gallery__image--5 {
+  background-image: url("https://funik.ru/wp-content/uploads/2018/11/90d7541fc52e67bca005.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: start;
+      align-self: start;
+  gap: 10px;
+  width: 500px;
+  -ms-grid-rows: (70px)[7];
+      grid-template-rows: repeat(7, 70px);
+  -ms-grid-columns: [form-start] 1fr 1fr [form-second] 1fr 1fr [form-end];
+      grid-template-columns: [form-start] 1fr 1fr [form-second] 1fr 1fr [form-end];
+}
+
+.form__input, .form__textarea {
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid orange;
+  background: #e2e2e20a;
+  padding-left: 5px;
+  color: #FFF;
+  font-family: "Open Sans";
+}
+
+.form__button {
+  outline: none;
+  display: block;
+  border: 5px solid orange;
+  width: 150px;
+  height: 50px;
+  font-family: "Open Sans";
+  color: #2a2a2a;
+  background: #FFF;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background: #2a2a2a;
+  color: orange;
+}
+
+.form__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20px auto;
+      grid-template-rows: 20px auto;
+  row-gap: 10px;
+}
+
+.form__container--name {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: form-start;
+      grid-column-start: form-start;
+  grid-column-end: form-second;
+}
+
+.form__container--surname {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: form-second;
+      grid-column-start: form-second;
+  grid-column-end: form-end;
+}
+
+.form__container--email {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-area: 2 / form-start / 3 / form-end;
+}
+
+.form__container--town {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-column: form-start / form-second;
+}
+
+.form__container--comment {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  grid-row: 4 / 7;
+  grid-column: form-start / span 3;
+}
+
+.form__container--button {
+  margin-top: 20px;
+  -ms-grid-row: 7;
+  grid-row: 7;
+  grid-column: form-start / form-end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer {
+  border-top: 1px solid orange;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "copyright subscribe" "copyright github";
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__copyright {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: copyright;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer__github {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: github;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer__subscribe {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: subscribe;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+/*# sourceMappingURL=style.css.map */
