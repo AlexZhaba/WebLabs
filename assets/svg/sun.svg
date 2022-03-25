@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <use href="#ver-line"></use>
+  <use href="#ver-line" x="40"></use>
+  <use href="#ver-line" x="80"></use>
+  <use href="#ver-line" x="120"></use>
+  <use href="#ver-line" x="160"></use>
+
+  <use href="#ver-line" x="40" y="-160" style="transform: rotate(90deg)"></use>
+  <use href="#ver-line" x="80" y="-160" style="transform: rotate(90deg)"></use>
+  
+  <symbol id="ver-line">
+    <line x1="10" y1="0" y2="150" x2="10" stroke-width="20" stroke="orange" />
+  </symbol>
+</svg>

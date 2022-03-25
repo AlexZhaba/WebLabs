@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" id="burger" onclick="openBurger(this)" data-open="true">
+  <!-- <line x1="0" y1="1" y2="1" x2="22" stroke-width="2" stroke="blue" id="line1" class="svg-line" /> -->
+  <line x1="0" y1="10" y2="10" x2="22" stroke-width="2" stroke="blue" id="line1" class="svg-line" />
+  <line x1="0" y1="10" y2="10" x2="22" stroke-width="2" stroke="blue" id="line2" class="svg-line" />
+  <line x1="0" y1="10" y2="10" x2="22" stroke-width="2" stroke="blue" id="line3" class="svg-line" />
+  <!-- <line x1="0" y1="20" y2="20" x2="22" stroke-width="2" stroke="blue" id="line3" class="svg-line" /> -->
+  <script type="text/javascript"><![CDATA[
+    document.getElementById("line1").style.transform = "translateY(-9px)";
+    document.getElementById("line1").style.transition = ".2s all";
+    document.getElementById("line2").style.transition = ".2s all";
+    document.getElementById("line1").style.transformOrigin = "center";
+    document.getElementById("line3").style.transform = "translateY(9px)";
+    document.getElementById("line3").style.transition = ".2s all";
+    document.getElementById("line3").style.transformOrigin = "center";
+
+    function openBurger(svg) {
+      console.log(svg.dataset.open);
+      if (svg.dataset.open === "true") {
+        document.getElementById("line2").style.opacity = "0";
+        document.getElementById("line1").style.transform = "translate(0, 0)";
+        document.getElementById("line3").style.transform = "translate(0, 0)";
+
+        setTimeout(() => {
+          document.getElementById("line1").style.transform = "translate(0, 0) rotate(45deg)";
+          document.getElementById("line3").style.transform = "translate(1px, 0) rotate(-45deg)";
+        }, 200);
+        svg.dataset.open = "false";
+      } else {
+        document.getElementById("line2").style.opacity = "1";
+        document.getElementById("line1").style.transform = "translate(0, 0)";
+        document.getElementById("line3").style.transform = "translate(0, 0)";
+
+        setTimeout(() => {
+          document.getElementById("line1").style.transform = "translateY(-9px)";
+          document.getElementById("line3").style.transform = "translateY(9px)";
+        }, 200);
+        svg.dataset.open = "true";
+      }
+    }
+    ]]>
+  </script>
+</svg>

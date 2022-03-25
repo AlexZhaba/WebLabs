@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <style>
+    @keyframes rotateLine {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #line1 {
+      animation: rotateLine 1s infinite linear;
+      transform-origin: center;
+    }
+  </style>
+  <circle cx="100" cy="100" r="90" stroke="red" stroke-width="2" fill="transparent" />
+  <line x1="100" y1="100" y2="100" x2="10" stroke-width="2" stroke="red" id="line1"  />
+</svg>
