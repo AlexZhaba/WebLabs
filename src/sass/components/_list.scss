@@ -1,0 +1,38 @@
+@use "../helpers";
+@use "../themes";
+@use "sass:color";
+@use "sass:map";
+
+.list {
+  list-style-type: none;
+  display: block;
+  @include helpers.flex-center(15px);
+
+  &-vertical {
+    @extend .list;
+    flex-direction: column;
+  }
+
+  &__item {
+    color: themes.$PRIMARY_TEXT_COLOR;
+    font-size: map.get(themes.$FONT_SIZE, "medium");
+    font-family: "Open Sans";
+
+    & > a {
+      @include helpers.disable-link;
+      transition: .2s color;
+
+      &:hover {
+        cursor: pointer;
+        transition: .2s color;
+        color: color.scale(themes.$PRIMARY_COLOR, $lightness: 50%);
+      }
+    }
+  }
+
+  &__title {
+    font-size: map.get(themes.$FONT_SIZE, "big");
+    color: themes.$PRIMARY_TEXT_COLOR;
+    font-family: "Open Sans";
+  }
+}

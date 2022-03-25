@@ -1,0 +1,31 @@
+@use "variables.scss" as *;
+
+@mixin flex-center($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin disable-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin adaptive-main-block($WIDTH) {
+  $pad: calc((100vw - $WIDTH) / 2);
+  // @if $pad > 0px) {
+    padding-left: $pad;
+    padding-right: $pad; 
+  // }
+}
+
+@function addPad($curWidth) {
+  $pad: calc((100vw - $CONTENT_SIZE) / 2);
+  @return calc($pad + $curWidth);
+}

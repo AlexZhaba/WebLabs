@@ -1,0 +1,11 @@
+@use "../helpers";
+@use "sass:map";
+@use "../themes" as *;
+
+.main {
+  min-height: calc(100vh - 150px);
+  @include helpers.flex-center(0);
+  font-size: map.get($FONT_SIZE, "huge", "type_3");
+  color: $SECONDARY_COLOR;
+  font-family: "Open Sans";
+}

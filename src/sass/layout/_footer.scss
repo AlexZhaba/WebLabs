@@ -1,0 +1,21 @@
+@use "../themes";
+@use "../helpers";
+
+.footer {
+  padding: 10px 0;
+  border-top: 2px solid themes.$SECONDARY_COLOR;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 20px;
+  align-items: start;
+
+  @include helpers.adaptive-main-block(helpers.$CONTENT_SIZE);
+
+  &__title {
+    font-size: 30px;
+    color: themes.$PRIMARY_TEXT_COLOR;
+    font-family: "Anton";
+    height: 100%;
+    @include helpers.flex-center(0);
+  }
+}
