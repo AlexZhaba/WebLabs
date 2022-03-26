@@ -1,0 +1,13 @@
+@use "../helpers";
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr 50px;
+  min-height: calc(100vh - 25px);
+  row-gap: 66px;
+}
+
+.header {
+  display: grid;
+  row-gap: 66px;
+}

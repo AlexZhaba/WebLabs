@@ -6,3 +6,55 @@
     @content;
   }
 }
+
+@mixin use-flex($jusCon: center, $alIt: center, $dir: row, $gap: 0) {
+  display: flex;
+  justify-content: $jusCon;
+  align-items: $alIt;
+  flex-direction: $dir;
+  gap: $gap;
+}
+
+@mixin use-font($type, $weight: default) {
+  font-family: 'Roboto Mono', monospace;
+  @if $type == "HEADING_1" {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+  }
+
+  @if $type == "HEADING_2" {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  @if $type == "BODY_1" {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  @if $type == "BODY_2" {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  @if $type == "SMALL_TEXT" {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  @if $weight != default {
+    font-weight: $weight;
+  }
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

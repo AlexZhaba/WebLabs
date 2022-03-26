@@ -1,0 +1,33 @@
+@use "../theme" as *;
+@use "../helpers";
+
+.searchbar {
+  $BUTTON_WIDTH: 46px;
+
+  @include helpers.use-flex($jusCon: flex-end);
+  width: 100%;
+  // height: 44px;
+
+  &__button {
+    height: 100%;
+    width: $BUTTON_WIDTH;
+    outline: none;
+    border: none;
+    background-color: $MAIN_COLOR_PRIMARY_3;
+    @include helpers.use-flex;
+  }
+
+  & label {
+    width: calc(100% - $BUTTON_WIDTH);
+    height: 100%;
+  }
+
+  & input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: $NEUTRAL_COLOR_LIGHT_GREY;
+    @include helpers.use-font("SMALL_TEXT", $weight: 400);
+    padding: 16px;
+  }
+}

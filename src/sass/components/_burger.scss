@@ -1,0 +1,102 @@
+@use "../helpers";
+@use "../theme";
+
+.burger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  & span {
+    width: 100%;
+    height: 2px;
+    background: theme.$MAIN_COLOR_PRIMARY_1;
+    transition: .4s opacity;
+    @include helpers.abs-center;
+  }
+
+  & > :last-child {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+
+  & > :first-child {
+    transform: translate(-50%, -50%) translateY(10px);
+  }
+
+  &-open {
+    & > :last-child {
+      animation: is-open-last .4s;
+      animation-fill-mode: forwards;  
+    }
+  
+    & > :first-child {
+      animation: is-open-first .4s;
+      animation-fill-mode: forwards;
+    }
+    
+    & > :first-child + span {
+      opacity: 0;
+    }
+  }
+
+  &-closed {
+    & > :last-child {
+      animation: is-closed-last .4s;
+      // animation-fill-mode: both;  
+    }
+  
+    & > :first-child {
+      animation: is-closed-first .4s;
+      // animation-fill-mode: both;
+    }
+    
+    & > :first-child + span {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes is-open-first {
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes is-closed-first {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(10px);
+  }
+}
+
+@keyframes is-open-last {
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes is-closed-last {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+}

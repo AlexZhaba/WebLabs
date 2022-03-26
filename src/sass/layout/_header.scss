@@ -1,0 +1,16 @@
+@use "../helpers";
+@use "../theme";
+
+.header {
+  @include helpers.use-flex(flex-start, flex-end, column, 67px);
+
+  &__logo {
+    width: 100%;
+    max-width: 288px;
+  }
+
+  &__navigation {
+    width: 100%;
+    @include helpers.use-flex($gap: 67px, $dir: column, $alIt: flex-end);
+  }
+}
