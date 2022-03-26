@@ -1,0 +1,7 @@
+@use "helpers";
+
+body {
+  @include helpers.adaptive("small") {
+    background: red;
+  }
+}
