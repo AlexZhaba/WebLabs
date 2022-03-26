@@ -1,5 +1,8 @@
 @use "../helpers";
+@use "sass:map";
+
 @forward "reset";
+@forward "typography";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
 
@@ -7,9 +10,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .wrapper {
-  padding: 0 17px;
+  padding: 0 map.get(helpers.$SIDE_PADDINGS, "tiny");
   padding-top: 25px;
 }

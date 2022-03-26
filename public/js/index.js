@@ -1,3 +1,4 @@
+// burger
 let isFirstClick = true;
 document.getElementById("burger").addEventListener("click", function() {
   if (!isFirstClick) {
@@ -5,3 +6,6 @@ document.getElementById("burger").addEventListener("click", function() {
   } else isFirstClick = false;
   this.classList.toggle("burger-open");
 })
+
+
+// hovering icons

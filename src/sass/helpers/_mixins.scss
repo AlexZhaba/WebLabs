@@ -19,19 +19,19 @@
   font-family: 'Roboto Mono', monospace;
   @if $type == "HEADING_1" {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 36px;
   }
 
   @if $type == "HEADING_2" {
     font-size: 19px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 28px;
   }
 
   @if $type == "BODY_1" {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 32px;
   }
 
@@ -43,7 +43,7 @@
 
   @if $type == "SMALL_TEXT" {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 14px;
   }
 
@@ -57,4 +57,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin fade($type) {
+  @if $type ==  "hide" {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+  } @else if $type== "show" {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s;
+  }
 }

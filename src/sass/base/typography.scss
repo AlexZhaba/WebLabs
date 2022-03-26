@@ -1,0 +1,22 @@
+@use "../helpers";
+@use "../theme";
+
+.heading-2 {
+  @include helpers.use-font("HEADING_2");
+}
+
+.body-2 {
+  @include helpers.use-font("BODY_2");
+}
+
+.small-text {
+  @include helpers.use-font("SMALL_TEXT");
+  color: theme.$MAIN_COLOR_PRIMARY_2;
+}
+
+.icon {
+  color: theme.$MAIN_COLOR_PRIMARY_3;
+  &:hover path {
+    color: theme.$MAIN_COLOR_PRIMARY_3;
+  }
+}

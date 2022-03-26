@@ -1,0 +1,88 @@
+@use "../helpers";
+@use "../theme" as *;
+@use "sass:map";
+
+.article {
+  @include helpers.use-flex($alIt: flex-start, $dir: column);
+
+  &__header {
+    @include helpers.use-flex($alIt: flex-start, $dir: column, $gap: 20px);
+  }
+
+  &__subtitle {
+    color: $NEUTRAL_COLOR_DARK_GREY;
+    @include helpers.use-font("SMALL_TEXT");
+  }
+
+  &__title {
+    @include helpers.use-font("HEADING_1");
+    color: $MAIN_COLOR_PRIMARY_2;
+  }
+
+  &__date {
+    @include helpers.use-font("SMALL_TEXT");
+    color: $NEUTRAL_COLOR_DARK_GREY;
+    @include helpers.use-flex($gap: 8px, $jusCon: flex-start);
+  }
+
+  &__date > :first-child {
+    padding-right: 8px;
+    border-right: 1px solid $NEUTRAL_COLOR_LIGHT_GREY;
+  }
+
+  &__image-container {
+    @include helpers.use-flex;
+    max-width: 100vw;
+    margin-left: -1 * map.get(helpers.$SIDE_PADDINGS, "tiny");
+    margin-right: -1 * map.get(helpers.$SIDE_PADDINGS, "tiny");
+    margin-top: 24px;
+    margin-bottom: 12px;
+    // transform: translateX(-25px);
+    overflow: hidden;
+  }
+
+  &__heading {
+    margin: 30px 0;
+  }
+
+  &__quote {
+    margin-top: 40px;
+    padding-left: 24px;
+    border-left: 1px solid $NEUTRAL_COLOR_GREY;
+  }
+
+  &__list {
+    @include helpers.use-flex($gap: 20px, $dir: column);
+  }
+
+  &__list-item {
+    margin-left: map.get(helpers.$SIDE_PADDINGS, "tiny");
+  }
+
+  &__list-item::marker {
+    width: 8px;
+    height: 8px;
+    background: $MAIN_COLOR_PRIMARY_2;
+    display: block;
+  }
+
+  &__tags-list {
+    @include helpers.use-flex($gap: 4px, $jusCon: flex-start);
+  }
+
+  &__tag {
+    margin-top: 48px;
+    background: $NEUTRAL_COLOR_LIGHT_GREY;
+    color: $MAIN_COLOR_PRIMARY_2;
+    padding: 8px 16px;
+    @include helpers.use-font("SMALL_TEXT");
+  }
+
+  &__share {
+    margin-top: 42px;
+    @include helpers.use-flex($gap: 24px, $jusCon: flex-start);
+    padding-bottom: 26px;
+    width: 100%;
+    border-bottom: 1px solid $NEUTRAL_COLOR_GREY;
+  }
+}
