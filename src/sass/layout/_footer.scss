@@ -1,3 +1,20 @@
+@use "sass:map";
+@use "../theme";
+@use "../helpers" as *;
+
+
 .footer {
-  background: blue;
+  margin-left: -1 * map.get($SIDE_PADDINGS, "tiny");
+  margin-right: -1 * map.get($SIDE_PADDINGS, "tiny");
+  background: theme.$NEUTRAL_COLOR_LIGHT_GREY;
+  padding: 0 map.get($SIDE_PADDINGS, "tiny");
+  padding-top: 118px;
+  padding-bottom: 48px;
+  position: relative;
+  @include use-flex($dir: column, $gap: 42px, $alIt: flex-start);
+
+  &__button {
+    @include abs-center;
+    top: -3px;
+  }
 }

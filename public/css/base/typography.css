@@ -70,3 +70,11 @@
   background: #2B2B2B;
   transition: 0.2s background;
 }
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}

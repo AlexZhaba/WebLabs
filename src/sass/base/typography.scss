@@ -59,3 +59,7 @@
     transition: .2s background;
   }
 }
+
+.list {
+  @include helpers.use-flex($gap: 24px, $jusCon: flex-start);
+}

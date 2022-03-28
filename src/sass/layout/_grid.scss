@@ -2,7 +2,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-rows: auto 1fr 50px;
+  grid-template-rows: auto 1fr auto;
   min-height: calc(100vh - 25px);
   row-gap: 66px;
 }

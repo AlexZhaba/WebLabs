@@ -80,7 +80,6 @@
 
   &__share {
     margin-top: 42px;
-    @include helpers.use-flex($gap: 24px, $jusCon: flex-start);
     padding-bottom: 26px;
     width: 100%;
     border-bottom: 1px solid $NEUTRAL_COLOR_GREY;
