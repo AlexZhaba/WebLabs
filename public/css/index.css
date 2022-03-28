@@ -192,6 +192,7 @@ template {
 .input, .textarea {
   border: none;
   outline: none;
+  border-radius: 3px;
   background: #F4F4F4;
   font-family: "Roboto Mono", monospace;
   font-size: 12px;
@@ -425,6 +426,9 @@ template {
 .form__container--inline {
   flex-direction: row;
   gap: 10px;
+}
+.form__checkbox {
+  flex-shrink: 0;
 }
 
 .article {

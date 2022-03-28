@@ -26,4 +26,8 @@
       gap: 10px;
     }
   }
+
+  &__checkbox {
+    flex-shrink: 0;
+  }
 }
