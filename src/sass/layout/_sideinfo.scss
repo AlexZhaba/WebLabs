@@ -1,0 +1,24 @@
+@use "../helpers";
+@use "../theme" as *;
+
+.sideinfo {
+  @include helpers.use-flex($gap: 16px, $alIt: flex-start, $dir: column);
+
+  &__explore {
+    @include helpers.use-flex($gap: 16px, $jusCon: flex-start);
+  }
+
+  &__button {
+    @include helpers.use-flex;
+    background: $NEUTRAL_COLOR_LIGHT_GREY;
+    border-radius: 3px;
+    font-size: 8px;
+    color: $MAIN_COLOR_PRIMARY_2;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__share {
+    margin-top: 24px;
+  }
+}

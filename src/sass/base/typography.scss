@@ -5,6 +5,10 @@
   @include helpers.use-font("HEADING_2");
 }
 
+.heading-1 {
+  @include helpers.use-font("HEADING_1");
+}
+
 .body-2 {
   @include helpers.use-font("BODY_2");
 }

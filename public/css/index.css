@@ -167,6 +167,13 @@ template {
   line-height: 28px;
 }
 
+.heading-1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
 .body-2 {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
@@ -307,6 +314,37 @@ template {
   top: -3px;
 }
 
+.sideinfo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+.sideinfo__explore {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+.sideinfo__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  background: #F4F4F4;
+  border-radius: 3px;
+  font-size: 8px;
+  color: #474747;
+  width: 20px;
+  height: 20px;
+}
+.sideinfo__share {
+  margin-top: 24px;
+}
+
 .searchbar {
   display: flex;
   justify-content: flex-end;
@@ -419,7 +457,7 @@ template {
   }
 }
 .comments {
-  margin-top: 48px;
+  margin: 48px 0;
   color: #474747;
 }
 .comments__form {
