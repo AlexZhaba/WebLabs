@@ -24,10 +24,5 @@
 
   & input {
     width: 100%;
-    border: none;
-    outline: none;
-    background: $NEUTRAL_COLOR_LIGHT_GREY;
-    @include helpers.use-font("SMALL_TEXT", $weight: 400);
-    padding: 16px;
   }
 }

@@ -20,7 +20,7 @@
         </div>
         <div class="searchbar">
           <label>
-            <input type="text" class="" placeholder="Search">
+            <input type="text" class="input" placeholder="Search">
           </label>
           <button class="searchbar__button">
             <object data="assets/icons/search.svg" type="image/svg+xml">
@@ -93,6 +93,36 @@
             </object>
           </a>
         </div>
+      </article>
+      <article class="comments">
+        <p class="heading-2">Add a Comment</p>
+        <form class="comments__form form" method="POST">
+          <div class="form__container">
+            <label for="name" class="form__label">Name*</label>
+            <input type="text" class="input" id="name" placeholder="Shane Hobbins">
+          </div>
+          <div class="form__container">
+            <label for="email" class="form__label">Email*</label>
+            <input type="email" class="input" id="email" placeholder="info@interface.com">
+          </div>
+          <div class="form__container">
+            <label for="website" class="form__label">Website*</label>
+            <input type="text" class="input" id="website" placeholder="www.interface.com">
+          </div>
+          <div class="form__container--inline">
+            <input type="checkbox" class="checkbox" id="agree">
+            <label for="agree" class="form__label">
+              <p class="small-text">Save my name, email, and website in this browser for the next time I comment.</p>
+            </label>
+          </div>
+          <div class="form__container">
+            <label for="message" class="form__label">Message</label>
+            <textarea class="textarea" id="message" placeholder="Hi there"></textarea>
+          </div>
+          <div class="form__container">
+            <button class="button">Post</button>
+          </div>
+        </form>
       </article>
     </main>
     <footer class="footer">

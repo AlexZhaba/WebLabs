@@ -52,7 +52,7 @@
   }
 
   &__list {
-    @include helpers.use-flex($gap: 20px, $dir: column);
+    @include helpers.use-flex($gap: 20px, $dir: column, $alIt: flex-start);
   }
 
   &__list-item {

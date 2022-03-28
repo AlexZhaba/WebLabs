@@ -1,3 +1,5 @@
-@use "searchbar";
-@use "burger";
-@use "article";
+@forward "searchbar";
+@forward "burger";
+@forward "comments";
+@forward "form";
+@forward "article";

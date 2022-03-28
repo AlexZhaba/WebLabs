@@ -1,5 +1,5 @@
 @use "../helpers";
-@use "../theme";
+@use "../theme" as *;
 
 .heading-2 {
   @include helpers.use-font("HEADING_2");
@@ -11,12 +11,50 @@
 
 .small-text {
   @include helpers.use-font("SMALL_TEXT");
-  color: theme.$MAIN_COLOR_PRIMARY_2;
+  color: $MAIN_COLOR_PRIMARY_2;
 }
 
 .icon {
-  color: theme.$MAIN_COLOR_PRIMARY_3;
+  color: $MAIN_COLOR_PRIMARY_3;
   &:hover path {
-    color: theme.$MAIN_COLOR_PRIMARY_3;
+    color: $MAIN_COLOR_PRIMARY_3;
+  }
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: $NEUTRAL_COLOR_LIGHT_GREY;
+  @include helpers.use-font("SMALL_TEXT", $weight: 400);
+  padding: 16px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid $MAIN_COLOR_PRIMARY_2;
+}
+
+.textarea {
+  @extend .input;
+  resize: none;
+}
+
+.button {
+  padding: 6px 24px;
+  max-width: 200px;
+  background: $MAIN_COLOR_PRIMARY_2;
+  outline: none;
+  border: none;
+  color: $NEUTRAL_COLOR_WHITE;
+  border-radius: 3px;
+  word-wrap: break-word;
+  transition: .2s background;
+  @include helpers.use-font("BODY_1");
+
+  &:hover {
+    cursor: pointer;
+    background: #2B2B2B;
+    transition: .2s background;
   }
 }

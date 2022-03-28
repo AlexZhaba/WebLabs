@@ -1,0 +1,71 @@
+.heading-2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.body-2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.small-text {
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #474747;
+}
+
+.icon {
+  color: #FFBA9D;
+}
+.icon:hover path {
+  color: #FFBA9D;
+}
+
+.input, .textarea {
+  border: none;
+  outline: none;
+  background: #F4F4F4;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  font-weight: 400;
+  padding: 16px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #474747;
+}
+
+.textarea {
+  resize: none;
+}
+
+.button {
+  padding: 6px 24px;
+  max-width: 200px;
+  background: #474747;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 3px;
+  word-wrap: break-word;
+  transition: 0.2s background;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+}
+.button:hover {
+  cursor: pointer;
+  background: #2B2B2B;
+  transition: 0.2s background;
+}

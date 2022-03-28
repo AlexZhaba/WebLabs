@@ -1,0 +1,29 @@
+@use "../helpers";
+
+.form {
+  &__label {
+    @include helpers.use-font("BODY_1");
+  }
+  &__container {
+    @include helpers.use-flex($dir: column, $alIt: flex-start, $jusCon: flex-start);
+
+
+    & input {
+      &:not(&[type="checkbox"]) {
+        width: 100%;
+      }
+    }
+
+    & textarea {
+      width: 100%;
+      height: 97px;
+    }
+
+    &--inline {
+      @extend .form__container;
+      flex-direction: row;
+      // justify-content: flex-start;
+      gap: 10px;
+    }
+  }
+}

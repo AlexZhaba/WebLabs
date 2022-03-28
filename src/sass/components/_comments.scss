@@ -1,0 +1,13 @@
+@use "../theme" as *;
+
+.comments {
+  margin-top: 48px;
+  color: $MAIN_COLOR_PRIMARY_2;
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    row-gap: 24px;
+  }
+}
