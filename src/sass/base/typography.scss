@@ -13,6 +13,10 @@
   @include helpers.use-font("BODY_2");
 }
 
+.body-1 {
+  @include helpers.use-font("BODY_1");
+}
+
 .small-text {
   @include helpers.use-font("SMALL_TEXT");
   color: $MAIN_COLOR_PRIMARY_2;

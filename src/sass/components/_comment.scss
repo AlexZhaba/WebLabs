@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.comment {
+  @include use-flex($gap: $COMMENT_COLUMN_GAP, $alIt: flex-start);
+
+  &__container {
+    @include use-flex($dir: column, $alIt: flex-start, $gap: 8px);
+  }
+
+  &__content {
+    margin-top: 16px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+  }
+
+  &__top-info {
+    @include use-flex($dir: column, $alIt: flex-start, $gap: 8px);
+  }
+
+  &__avatar {
+    width: $AVATAR_SIZE;
+    height: $AVATAR_SIZE;
+  }
+
+  &__reply {
+    @include use-flex($gap: 12px);
+  }
+
+  &--lvl2 {
+    margin-left: $COMMENT_COLUMN_GAP + $AVATAR_SIZE;
+  }
+}

@@ -181,6 +181,13 @@ template {
   line-height: 24px;
 }
 
+.body-1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
 .small-text {
   font-family: "Roboto Mono", monospace;
   font-size: 12px;
@@ -466,7 +473,28 @@ template {
   margin-top: 40px;
   row-gap: 24px;
 }
+.comments__title {
+  margin-bottom: 12px;
+}
+.comments__list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+.comments .comment:not(:first-of-type) {
+  padding-top: 24px;
+  border-top: 1px solid #DFDFDF;
+}
+.comments .comment--lvl2:not(:first-of-type) {
+  padding-top: 0px;
+  border-top: 0;
+}
 
+.form {
+  padding-bottom: 45px;
+}
 .form__label {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
@@ -598,4 +626,45 @@ template {
   padding-bottom: 26px;
   width: 100%;
   border-bottom: 1px solid #DFDFDF;
+}
+
+.comment {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 24px;
+}
+.comment__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+.comment__content {
+  margin-top: 16px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+.comment__top-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+.comment__avatar {
+  width: 70px;
+  height: 70px;
+}
+.comment__reply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+.comment--lvl2 {
+  margin-left: 94px;
 }

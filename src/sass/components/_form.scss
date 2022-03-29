@@ -1,6 +1,8 @@
 @use "../helpers";
 
 .form {
+  padding-bottom: 45px;
+
   &__label {
     @include helpers.use-font("BODY_1");
   }
