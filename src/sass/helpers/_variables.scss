@@ -1,16 +1,22 @@
 $breakpoints: (
-  "tiny": 320px,
+  "tiny": 200px,
   "small": 420px,
   "tablet": 720px,
-  "big": 1440px
+  "pred_medium": 1024px,
+  "medium": 1280px,
+  "big": 1440px,
+  "biggest": 1920px,
 );
 
-$LOGO_SIZE: 150px;
+$LOGO_SIZE: 288px;
+$LOGO_HEIGHT: 225px;
 
 $SIDE_PADDINGS: (
   "tiny": 17px,
   "small": 17px,
   "tablet": 25px,
+  "pred_medium": 50px,
+  "medium": 162px,
   "big": 25px,
 );
 

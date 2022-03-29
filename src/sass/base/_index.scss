@@ -1,4 +1,4 @@
-@use "../helpers";
+@use "../helpers" as *;
 @use "sass:map";
 
 @forward "reset";
@@ -13,6 +13,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.wrapper {
-  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }

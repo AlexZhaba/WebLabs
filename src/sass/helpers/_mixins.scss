@@ -97,10 +97,15 @@
   @include padding-connect("tiny");
   @include padding-connect("small");
   @include padding-connect("tablet");
-  @include padding-connect("big");
+  @include padding-connect("pred_medium");
 
-  @include adaptive("tablet") {
-    width: 700px;
+  @include adaptive("pred_medium") {
+    width: 900px;
     place-self: center;
+  }
+
+  @include adaptive("medium") {
+    width: 100%;
+    padding: 0;
   }
 }
