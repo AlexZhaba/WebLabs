@@ -2,6 +2,7 @@
 
 .form {
   padding-bottom: 45px;
+  max-width: 740px;
 
   &__label {
     @include helpers.use-font("BODY_1");

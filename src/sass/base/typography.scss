@@ -71,3 +71,8 @@
 .list {
   @include helpers.use-flex($gap: 24px, $jusCon: flex-start);
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -15,5 +15,8 @@
 
 .wrapper {
   padding: 0 map.get(helpers.$SIDE_PADDINGS, "tiny");
-  padding-top: 25px;
+
+  @include helpers.adaptive("tablet") {
+    padding: 0 map.get(helpers.$SIDE_PADDINGS, "tablet");
+  }
 }

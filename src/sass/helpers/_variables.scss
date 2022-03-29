@@ -1,7 +1,7 @@
 $breakpoints: (
   "tiny": 320px,
-  "small": 480px,
-  "medium": 720px,
+  "small": 420px,
+  "tablet": 720px,
   "big": 1440px
 );
 
@@ -9,6 +9,7 @@ $LOGO_SIZE: 150px;
 
 $SIDE_PADDINGS: (
   "tiny": 17px,
+  "tablet": 25px,
 );
 
 $AVATAR_SIZE: 70px;

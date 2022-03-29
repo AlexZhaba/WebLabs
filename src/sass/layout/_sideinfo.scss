@@ -2,6 +2,7 @@
 @use "../theme" as *;
 
 .sideinfo {
+  padding-bottom: 64px;
   @include helpers.use-flex($gap: 16px, $alIt: flex-start, $dir: column);
 
   &__explore {

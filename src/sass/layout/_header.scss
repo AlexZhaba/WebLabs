@@ -11,6 +11,28 @@
 
   &__navigation {
     width: 100%;
-    @include helpers.use-flex($gap: 67px, $dir: column, $alIt: flex-end);
+
+    @include helpers.use-flex($gap: 67px, $dir: column, $alIt: flex-end, $break: "small") {
+      flex-direction: row-reverse;
+      gap: 44px;
+      align-items: center;
+    };
+
+    @include helpers.adaptive("tablet") {
+      flex-direction: row;
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+    flex-shrink: 0;
+    @include helpers.use-flex($gap: 45px, $break: "tablet") {
+      display: flex;
+    };
+    display: none;
+
+    & li {
+      flex-shrink: 0;
+    }
   }
 }

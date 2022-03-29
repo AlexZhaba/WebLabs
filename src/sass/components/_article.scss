@@ -37,8 +37,16 @@
     margin-right: -1 * map.get(helpers.$SIDE_PADDINGS, "tiny");
     margin-top: 24px;
     margin-bottom: 12px;
-    // transform: translateX(-25px);
     overflow: hidden;
+
+    @include helpers.adaptive("tablet") {
+      margin-left: 0;
+      margin-right: 0;
+
+      & img {
+        max-width: 100%;
+      }
+    }
   }
 
   &__heading {

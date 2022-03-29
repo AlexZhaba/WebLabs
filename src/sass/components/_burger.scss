@@ -5,6 +5,11 @@
   width: 30px;
   height: 30px;
   position: relative;
+  flex-shrink: 0;
+
+  @include helpers.adaptive("tablet") {
+    display: none;
+  }
 
   &:hover {
     cursor: pointer;

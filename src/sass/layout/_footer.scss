@@ -3,18 +3,30 @@
 @use "../helpers" as *;
 
 
+@mixin padding-connect($breakpoint) {
+  @include adaptive($breakpoint) {
+    margin-left: -1 * map.get($SIDE_PADDINGS, $breakpoint);
+    margin-right: -1 * map.get($SIDE_PADDINGS, $breakpoint);
+    padding-left: map.get($SIDE_PADDINGS, $breakpoint);
+    padding-right: map.get($SIDE_PADDINGS, $breakpoint);
+  }
+}
+
 .footer {
-  margin-left: -1 * map.get($SIDE_PADDINGS, "tiny");
-  margin-right: -1 * map.get($SIDE_PADDINGS, "tiny");
   background: theme.$NEUTRAL_COLOR_LIGHT_GREY;
-  padding: 0 map.get($SIDE_PADDINGS, "tiny");
   padding-top: 118px;
   padding-bottom: 48px;
   position: relative;
-  @include use-flex($dir: column, $gap: 42px, $alIt: flex-start);
+  @include use-flex($dir: column, $gap: 42px, $alIt: flex-start, $break: "tablet") {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  };
 
   &__button {
     @include abs-center;
     top: -3px;
   }
+  @include padding-connect("tiny");
+  @include padding-connect("tablet");
 }

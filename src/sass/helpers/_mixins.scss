@@ -7,12 +7,18 @@
   }
 }
 
-@mixin use-flex($jusCon: center, $alIt: center, $dir: row, $gap: 0) {
+@mixin use-flex($jusCon: center, $alIt: center, $dir: row, $gap: 0, $break: 0) {
   display: flex;
   justify-content: $jusCon;
   align-items: $alIt;
   flex-direction: $dir;
   gap: $gap;
+
+  @if $break != 0 {
+    @include adaptive($break) {
+      @content;
+    };
+  }
 }
 
 @mixin use-font($type, $weight: default) {
