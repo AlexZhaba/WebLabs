@@ -2,6 +2,7 @@
 @use "../theme";
 
 .header {
+  @include helpers.main-padding-connect();
   @include helpers.use-flex(flex-start, flex-end, column, 67px);
 
   &__logo {

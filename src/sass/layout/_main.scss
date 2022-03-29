@@ -1,2 +1,5 @@
+@use "../helpers";
+
 .main {
+  @include helpers.main-padding-connect();
 }

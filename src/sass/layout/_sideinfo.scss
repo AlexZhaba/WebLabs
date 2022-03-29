@@ -2,6 +2,7 @@
 @use "../theme" as *;
 
 .sideinfo {
+  @include helpers.main-padding-connect();
   padding-bottom: 64px;
   @include helpers.use-flex($gap: 16px, $alIt: flex-start, $dir: column);
 

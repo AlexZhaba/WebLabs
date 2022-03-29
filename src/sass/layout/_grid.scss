@@ -3,8 +3,11 @@
 .wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   min-height: calc(100vh - 25px);
   row-gap: 48px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {

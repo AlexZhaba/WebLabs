@@ -2,31 +2,27 @@
 @use "../theme";
 @use "../helpers" as *;
 
-
-@mixin padding-connect($breakpoint) {
-  @include adaptive($breakpoint) {
-    margin-left: -1 * map.get($SIDE_PADDINGS, $breakpoint);
-    margin-right: -1 * map.get($SIDE_PADDINGS, $breakpoint);
-    padding-left: map.get($SIDE_PADDINGS, $breakpoint);
-    padding-right: map.get($SIDE_PADDINGS, $breakpoint);
-  }
-}
-
 .footer {
   background: theme.$NEUTRAL_COLOR_LIGHT_GREY;
   padding-top: 118px;
   padding-bottom: 48px;
   position: relative;
-  @include use-flex($dir: column, $gap: 42px, $alIt: flex-start, $break: "tablet") {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  };
+  display: grid;
 
   &__button {
     @include abs-center;
     top: -3px;
   }
-  @include padding-connect("tiny");
-  @include padding-connect("tablet");
+
+  width: 100%;
+
+  &__container {
+    @include main-padding-connect;
+    @include use-flex($dir: column, $gap: 42px, $alIt: flex-start, $break: "tablet") {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    };
+  }
+  // @include padding-connect("tablet");
 }
