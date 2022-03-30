@@ -9,6 +9,10 @@
     @include helpers.use-flex($alIt: flex-start, $dir: column, $gap: 20px);
   }
 
+  &__top-header {
+    @include helpers.use-flex($gap: 30px)
+  }
+
   &__subtitle {
     color: $NEUTRAL_COLOR_DARK_GREY;
     @include helpers.use-font("SMALL_TEXT");
@@ -17,6 +21,10 @@
   &__title {
     @include helpers.use-font("HEADING_1");
     color: $MAIN_COLOR_PRIMARY_2;
+
+    @include helpers.adaptive("tablet") {
+      margin: 0;
+    }
   }
 
   &__date {
@@ -76,10 +84,14 @@
 
   &__tags-list {
     @include helpers.use-flex($gap: 4px, $jusCon: flex-start);
+    margin-top: 48px;
+
+    @include helpers.adaptive("tablet") {
+      margin-top: 64px;
+    }
   }
 
   &__tag {
-    margin-top: 48px;
     background: $NEUTRAL_COLOR_LIGHT_GREY;
     color: $MAIN_COLOR_PRIMARY_2;
     padding: 8px 16px;

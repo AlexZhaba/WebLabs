@@ -40,7 +40,7 @@
     }
 
     @include adaptive("big") {
-      max-width: 1143px;
+      max-width: 1134px;
     }
 
     @include use-flex($dir: column, $gap: 42px, $alIt: flex-start, $break: "tablet") {

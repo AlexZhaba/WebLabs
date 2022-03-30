@@ -126,6 +126,27 @@
   margin-top: 40px;
   row-gap: 24px;
 }
+@media screen and (min-width: 720px) {
+  .comments__form {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 23px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .comments__form__save {
+    grid-column: 1/span 3;
+  }
+}
+@media screen and (min-width: 720px) {
+  .comments__form__message {
+    grid-column: 1/span 3;
+  }
+}
+@media screen and (min-width: 720px) {
+  .comments__form__button {
+    grid-column: 1/span 3;
+  }
+}
 .comments__title {
   margin-bottom: 12px;
 }
@@ -147,6 +168,11 @@
 
 .form {
   padding-bottom: 45px;
+}
+@media screen and (min-width: 720px) {
+  .form {
+    padding-bottom: 64px;
+  }
 }
 .form__label {
   font-family: "Roboto Mono", monospace;
@@ -190,6 +216,13 @@
   flex-direction: column;
   gap: 20px;
 }
+.article__top-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
 .article__subtitle {
   color: #777777;
   font-family: "Roboto Mono", monospace;
@@ -203,6 +236,11 @@
   font-weight: 400;
   line-height: 36px;
   color: #474747;
+}
+@media screen and (min-width: 720px) {
+  .article__title {
+    margin: 0;
+  }
 }
 .article__date {
   font-family: "Roboto Mono", monospace;
@@ -272,9 +310,14 @@
   align-items: center;
   flex-direction: row;
   gap: 4px;
+  margin-top: 48px;
+}
+@media screen and (min-width: 720px) {
+  .article__tags-list {
+    margin-top: 64px;
+  }
 }
 .article__tag {
-  margin-top: 48px;
   background: #F4F4F4;
   color: #474747;
   padding: 8px 16px;
@@ -475,7 +518,7 @@
 }
 @media screen and (min-width: 1280px) {
   .main {
-    margin-bottom: 140px;
+    margin-bottom: 234px;
   }
 }
 
@@ -562,7 +605,7 @@
 }
 @media screen and (min-width: 1440px) {
   .footer__container {
-    max-width: 1143px;
+    max-width: 1134px;
   }
 }
 @media screen and (min-width: 720px) {
@@ -575,7 +618,7 @@
 
 .sideinfo {
   padding-bottom: 64px;
-  margin-bottom: 246px;
+  margin-bottom: 286px;
   display: flex;
   justify-content: center;
   align-items: flex-start;

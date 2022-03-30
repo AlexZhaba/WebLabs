@@ -4,6 +4,6 @@
   @include helpers.main-padding-connect();
 
   @include helpers.adaptive("medium") {
-    margin-bottom: 140px;
+    margin-bottom: 94px + 140px;
   }
 }

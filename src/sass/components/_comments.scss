@@ -10,6 +10,29 @@
     grid-template-columns: 1fr;
     margin-top: 40px;
     row-gap: 24px;
+
+    @include helpers.adaptive("tablet") {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 23px;
+    }
+
+    &__save {
+      @include helpers.adaptive("tablet") {
+        grid-column: 1 / span 3;
+      }
+    }
+
+    &__message {
+      @include helpers.adaptive("tablet") {
+        grid-column: 1 / span 3;
+      }
+    }
+
+    &__button {
+      @include helpers.adaptive("tablet") {
+        grid-column: 1 / span 3;
+      }
+    }
   }
 
   &__title {

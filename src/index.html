@@ -38,9 +38,28 @@
     <main class="main">
       <article class="article">
         <header class="article__header">
-          <p class="article__subtitle">
-            User interface
-          </p>
+          <div class="article__top-header">
+            <p class="article__subtitle">
+              User interface
+            </p>
+            <div class="list">
+              <a href="#">
+                <img src="assets/icons/facebook.svg" />
+              </a>
+              <a href="#">
+                <object data="assets/icons/github.svg" type="image/svg+xml">
+                </object>
+              </a>
+              <a href="#">
+                <object data="assets/icons/twitter.svg" type="image/svg+xml">
+                </object>
+              </a>
+              <a href="#">
+                <object data="assets/icons/linkedin.svg" type="image/svg+xml">
+                </object>
+              </a>
+            </div>
+          </div>
           <h1 class="article__title">
             Bad Design vs. Good Design: 5 Examples We can Learn From
           </h1>
@@ -115,17 +134,17 @@
             <label for="website" class="form__label">Website*</label>
             <input type="text" class="input" id="website" placeholder="www.interface.com">
           </div>
-          <div class="form__container--inline">
+          <div class="form__container--inline comments__form__save">
             <input type="checkbox" class="form__checkbox checkbox" id="agree">
             <label for="agree" class="form__label">
               <p class="small-text">Save my name, email, and website in this browser for the next time I comment.</p>
             </label>
           </div>
-          <div class="form__container">
+          <div class="form__container comments__form__message">
             <label for="message" class="form__label">Message</label>
             <textarea class="textarea" id="message" placeholder="Hi there"></textarea>
           </div>
-          <div class="form__container">
+          <div class="form__container comments__form__button">
             <button class="button">Post</button>
           </div>
         </form>
