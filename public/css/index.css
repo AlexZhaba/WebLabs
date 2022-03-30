@@ -473,14 +473,29 @@
     padding: 0;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main {
+    margin-bottom: 140px;
+  }
+}
 
 .footer {
   background: #F4F4F4;
-  padding-top: 118px;
-  padding-bottom: 48px;
-  position: relative;
-  display: grid;
-  width: 100%;
+  height: 246px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+}
+@media screen and (min-width: 720px) {
+  .footer {
+    height: 94px;
+  }
 }
 .footer__button {
   position: absolute;
@@ -490,6 +505,9 @@
   top: -3px;
 }
 .footer__container {
+  position: relative;
+  flex: 1;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -534,6 +552,21 @@
 }
 @media screen and (min-width: 720px) {
   .footer__container {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    max-width: calc(100% - 324px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    max-width: 1143px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .footer__container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -542,6 +575,7 @@
 
 .sideinfo {
   padding-bottom: 64px;
+  margin-bottom: 246px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -582,6 +616,11 @@
   .sideinfo {
     width: 100%;
     padding: 0;
+  }
+}
+@media screen and (min-width: 720px) {
+  .sideinfo {
+    margin-bottom: 94px;
   }
 }
 .sideinfo__explore {
@@ -633,15 +672,15 @@
     display: grid;
     column-gap: 100px;
     grid-template-columns: 288px auto;
-    grid-template-rows: 64.5px 112.5px auto auto;
+    grid-template-rows: 64.5px 112.5px auto;
     min-height: 100vh;
     max-width: calc(100% - 324px);
     padding-top: 110px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
   .wrapper {
-    max-width: 1400px;
+    max-width: 1134px;
   }
 }
 
@@ -957,4 +996,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }

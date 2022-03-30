@@ -100,6 +100,7 @@
   @include padding-connect("pred_medium");
 
   @include adaptive("pred_medium") {
+    // max-width: 900px;
     width: 900px;
     place-self: center;
   }

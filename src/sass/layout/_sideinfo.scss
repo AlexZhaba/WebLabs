@@ -4,7 +4,12 @@
 .sideinfo {
   @include helpers.main-padding-connect();
   padding-bottom: 64px;
+  margin-bottom: 246px;
   @include helpers.use-flex($gap: 16px, $alIt: flex-start, $dir: column);
+
+  @include helpers.adaptive("tablet") {
+    margin-bottom: 94px;
+  }
 
   &__explore {
     @include helpers.use-flex($gap: 16px, $jusCon: flex-start);
