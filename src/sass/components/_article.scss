@@ -10,7 +10,14 @@
   }
 
   &__top-header {
-    @include helpers.use-flex($gap: 30px)
+    @include helpers.use-flex($gap: 30px);
+
+    & > :last-child {
+      display: none;
+      @include helpers.adaptive("tablet") {
+        display: flex;
+      }
+    }
   }
 
   &__subtitle {
@@ -95,6 +102,7 @@
     background: $NEUTRAL_COLOR_LIGHT_GREY;
     color: $MAIN_COLOR_PRIMARY_2;
     padding: 8px 16px;
+    border-radius: 3px;
     @include helpers.use-font("SMALL_TEXT");
   }
 

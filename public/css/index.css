@@ -223,6 +223,14 @@
   flex-direction: row;
   gap: 30px;
 }
+.article__top-header > :last-child {
+  display: none;
+}
+@media screen and (min-width: 720px) {
+  .article__top-header > :last-child {
+    display: flex;
+  }
+}
 .article__subtitle {
   color: #777777;
   font-family: "Roboto Mono", monospace;
@@ -321,6 +329,7 @@
   background: #F4F4F4;
   color: #474747;
   padding: 8px 16px;
+  border-radius: 3px;
   font-family: "Roboto Mono", monospace;
   font-size: 12px;
   font-weight: 400;
