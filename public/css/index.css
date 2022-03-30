@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
 .searchbar {
+  border-radius: 3px;
+  overflow: hidden;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -13,11 +15,19 @@
   outline: none;
   border: none;
   background-color: #FFBA9D;
+  transition: 0.2s background;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 0;
+}
+.searchbar__button:hover {
+  cursor: pointer;
+}
+.searchbar__button:active {
+  transition: 0.2s background;
+  background: #a6a6a6;
 }
 .searchbar label {
   width: calc(100% - 46px);
@@ -196,6 +206,7 @@
 }
 .form__container--inline {
   flex-direction: row;
+  align-items: center;
   gap: 10px;
 }
 .form__checkbox {
@@ -330,10 +341,15 @@
   color: #474747;
   padding: 8px 16px;
   border-radius: 3px;
+  transition: 0.2s background;
   font-family: "Roboto Mono", monospace;
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
+}
+.article__tag:hover {
+  background: #e6e6e6;
+  transition: 0.2s background;
 }
 .article__share {
   margin-top: 42px;
@@ -469,6 +485,18 @@
   flex-direction: row;
   gap: 45px;
   display: none;
+}
+.header__menu a {
+  color: #777777;
+  transition: 0.2s color, 0.2s border-bottom;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #FFF;
+  transform: translateY(4px);
+}
+.header__menu a:hover {
+  color: #474747;
+  transition: 0.2s color, 0.2s border-bottom;
+  border-bottom: 2px solid #a6a6a6;
 }
 @media screen and (min-width: 720px) {
   .header__menu {
@@ -1030,6 +1058,14 @@ template {
   align-items: center;
   flex-direction: row;
   gap: 24px;
+}
+
+.social-icon {
+  transition: 0.2s filter;
+}
+.social-icon:hover {
+  filter: invert(100%) sepia(2%) saturate(6716%) hue-rotate(333deg) brightness(100%) contrast(85%);
+  transition: 0.2s filter;
 }
 
 a {

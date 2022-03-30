@@ -1,6 +1,7 @@
 @use "../helpers";
 @use "../theme" as *;
 @use "sass:map";
+@use "sass:color";
 
 .article {
   @include helpers.use-flex($alIt: flex-start, $dir: column);
@@ -103,7 +104,13 @@
     color: $MAIN_COLOR_PRIMARY_2;
     padding: 8px 16px;
     border-radius: 3px;
+    transition: .2s background;
     @include helpers.use-font("SMALL_TEXT");
+
+    &:hover {
+      background: color.change($MAIN_COLOR_PRIMARY_2, $lightness: 90%);
+      transition: .2s background;
+    }
   }
 
   &__share {

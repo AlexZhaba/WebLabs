@@ -1,8 +1,11 @@
 @use "../theme" as *;
 @use "../helpers";
+@use "sass:color";
 
 .searchbar {
   $BUTTON_WIDTH: 46px;
+  border-radius: 3px;
+  overflow: hidden;
 
   @include helpers.use-flex($jusCon: flex-end);
   width: 100%;
@@ -14,7 +17,17 @@
     outline: none;
     border: none;
     background-color: $MAIN_COLOR_PRIMARY_3;
+    transition: .2s background;
     @include helpers.use-flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transition: .2s background;
+      background: color.change($NEUTRAL_COLOR_DARK_GREY, $lightness: 65%);
+    }
   }
 
   & label {
