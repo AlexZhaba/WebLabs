@@ -1,0 +1,14 @@
+@page {
+  margin: 20mm 10mm;
+  size: A4 portrait;
+}
+
+.article__title {
+  string-set: articleTitle content();
+}
+
+@page :right {
+  @right-top {
+    content: string(articleTitle);
+  }
+}

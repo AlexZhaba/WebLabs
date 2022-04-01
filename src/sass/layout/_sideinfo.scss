@@ -13,6 +13,10 @@
 
   &__explore {
     @include helpers.use-flex($gap: 16px, $jusCon: flex-start);
+    
+    @media print {
+      display: none;
+    }
   }
 
   &__button {

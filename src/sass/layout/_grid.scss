@@ -66,6 +66,10 @@
     grid-column: 2;
     grid-row-end: 4;
   }
+  
+  @media print {
+    // grid-row-start: 1;
+  }
 }
 
 .footer {

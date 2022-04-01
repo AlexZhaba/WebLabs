@@ -1,3 +1,5 @@
 @use "components";
 @use "layout";
 @use "base";
+
+@import "./base/printer.css" print;

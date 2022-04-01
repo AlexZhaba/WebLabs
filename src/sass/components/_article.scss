@@ -4,8 +4,6 @@
 @use "sass:color";
 
 .article {
-  @include helpers.use-flex($alIt: flex-start, $dir: column);
-
   &__header {
     @include helpers.use-flex($alIt: flex-start, $dir: column, $gap: 20px);
   }
@@ -118,5 +116,12 @@
     padding-bottom: 26px;
     width: 100%;
     border-bottom: 1px solid $NEUTRAL_COLOR_GREY;
+
+    @media print {
+      & > .small-text {
+        display: none;
+      }
+      padding-bottom: 0;
+    }
   }
 }

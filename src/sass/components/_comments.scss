@@ -2,8 +2,17 @@
 @use "../helpers";
 
 .comments {
+  clear: both;
+
   margin-top: 48px;
   color: $MAIN_COLOR_PRIMARY_2;
+
+  @media print {
+    // display: none;
+    & > :not(.comments__list) {
+      display: none;
+    }
+  }
 
   &__form {
     display: grid;
@@ -41,6 +50,14 @@
 
   &__list {
     @include helpers.use-flex($gap: 24px, $alIt: flex-start, $dir: column);
+
+    @media print {
+      display: block;
+      position: relative;
+      & > :not(:last-child) {
+        padding-bottom: 24px;
+      }
+    }
   }
 
   .comment {

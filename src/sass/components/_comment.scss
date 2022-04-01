@@ -2,7 +2,7 @@
 
 .comment {
   @include use-flex($gap: $COMMENT_COLUMN_GAP, $alIt: flex-start);
-
+  position: relative;
   &__container {
     @include use-flex($dir: column, $alIt: flex-start, $gap: 8px);
   }
@@ -24,6 +24,10 @@
 
   &__reply {
     @include use-flex($gap: 12px);
+
+    @media print {
+      display: none;
+    }
   }
 
   &--lvl2 {

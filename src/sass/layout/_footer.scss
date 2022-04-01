@@ -10,6 +10,7 @@
   left: 0;
   right: 0;
   @include use-flex;
+
   @include adaptive("tablet") {
     height: 94px;
   }
@@ -48,6 +49,14 @@
       align-items: center;
       justify-content: space-between;
     };
+    
+    @media print {
+      justify-content: center;
+
+      & > img {
+        display: none;
+      }
+    }
   }
   // @include padding-connect("tablet");
 }
