@@ -134,3 +134,63 @@ form.addEventListener("submit", function(event) {
     form_ticket_count: form_ticket_count.value,
   });
 })
+
+
+// APIS
+
+const API = 'http://students-api.std-1578.ist.mospolytech.ru/api';
+
+async function makeRequest(url, method, body = null) {
+  const bodyJSON = body ? {
+    body: JSON.stringify(body),
+  } : {};
+  return new Promise((resolve, reject) => {
+    fetch(url, {
+      method,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      ...bodyJSON,
+    })
+      .then(response => response.json()).then(result => resolve(result))
+      .catch(error => resolve(error));
+  })
+};
+
+function showRes(result, elem) {
+  try {
+    elem.innerText = JSON.stringify(result, null, 2);
+  } catch {
+    elem.innerText = result;
+  }
+}
+
+const buttonGet = document.getElementById("button-get");
+const buttonPost = document.getElementById("button-post");
+
+buttonGet.addEventListener("click", async () => {
+  const dataRoot = document.getElementById("button-get-answer");
+  dataRoot.innerHTML = '';
+  buttonGet.classList.add("button--disable");
+  buttonPost.setAttribute("disabled", "true");
+  const result = await makeRequest(`${API}/get/`, "GET");
+  buttonPost.removeAttribute("disabled");
+  buttonGet.classList.remove("button--disable");
+  showRes(result, dataRoot);
+});
+
+buttonPost.addEventListener("click", async () => {
+  const dataRoot = document.getElementById("button-post-answer");
+  dataRoot.innerHTML = '';
+  buttonPost.classList.add("button--disable");
+  buttonPost.setAttribute("disabled", "true");
+  const result = await makeRequest(`${API}/post/`, "POST", {
+    name: "Alexandr Zhavoronkov",
+    group: "211-321",
+  });
+  buttonPost.removeAttribute("disabled");
+  buttonPost.classList.remove("button--disable");
+  
+  showRes(result, dataRoot);
+});

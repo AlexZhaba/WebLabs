@@ -112,3 +112,39 @@ p {
 .page-break {
   break-before: always;
 }
+
+code {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.button--disable {
+  background: grey;
+  position: relative;
+  &:hover {
+    cursor: not-allowed;
+    background: grey;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border: .2em solid currentcolor;
+    border-bottom-color: #FFBA9D;
+    border-radius: 50%;
+    animation: 1s loader_03 linear infinite;
+    display: block;
+  }
+}
+
+@keyframes loader_03 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
