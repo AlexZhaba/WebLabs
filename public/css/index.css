@@ -43,6 +43,7 @@
   height: 30px;
   position: relative;
   flex-shrink: 0;
+  z-index: 30;
 }
 @media screen and (min-width: 720px) {
   .burger {
@@ -270,6 +271,9 @@
     margin: 0;
   }
 }
+.article__questions {
+  margin: 10px 0;
+}
 .article__date {
   font-family: "Roboto Mono", monospace;
   font-size: 12px;
@@ -422,6 +426,85 @@
   margin-left: 94px;
 }
 
+.accordeon__button {
+  background: #F4F4F4;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  border: 1px solid #DFDFDF;
+  cursor: pointer;
+}
+.accordeon__body {
+  padding: 0 20px;
+  width: 100%;
+  height: 0;
+  transition: 0.2s height, 0.2s padding;
+  overflow: hidden;
+  border-left: 1px solid #DFDFDF;
+  border-right: 1px solid #DFDFDF;
+}
+.accordeon__body--opened {
+  padding: 10px 20px;
+  border: 1px solid #DFDFDF;
+  border-top: none;
+}
+
+.toast {
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+  margin: 0 10px;
+  width: 300px;
+  max-width: calc(100vw - 20px);
+  background: #FFFFFF;
+  border: 2px solid #FFBA9D;
+  border-radius: 5px;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s all;
+  transform: translateY(-100px);
+}
+.toast--show {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.4s all cubic-bezier(0.65, 1.95, 0.03, 0.32);
+  transform: translateY(0px);
+}
+.toast__container {
+  position: relative;
+  padding: 10px 20px;
+}
+.toast__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: inherit;
+  transition: 0.2s all;
+}
+.toast__close:hover {
+  color: #FFBA9D;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+@keyframes show_menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes close_menu {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .header {
   display: flex;
   justify-content: flex-start;
@@ -507,6 +590,7 @@
 .header__menu {
   list-style-type: none;
   flex-shrink: 0;
+  transition: 0.2s background;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -525,6 +609,22 @@
   color: #474747;
   transition: 0.2s color, 0.2s border-bottom;
   border-bottom: 2px solid #a6a6a6;
+}
+.header__menu--mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  flex-direction: column;
+  background: #FFFFFF;
+  z-index: 20;
+  display: flex;
+  animation: 0.2s show_menu;
+}
+.header__menu--removing {
+  animation: 0.2s close_menu;
+  animation-fill-mode: forwards;
 }
 @media screen and (min-width: 720px) {
   .header__menu {
@@ -1149,4 +1249,8 @@ body {
   justify-content: center;
   align-items: flex-start;
   position: relative;
+}
+
+.body--fixed {
+  overflow: hidden;
 }

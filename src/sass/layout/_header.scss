@@ -2,6 +2,24 @@
 @use "../theme";
 @use "sass:color";
 
+@keyframes show_menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close_menu {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .header {
   @include helpers.main-padding-connect();
   @include helpers.use-flex(flex-start, flex-end, column, 67px);
@@ -42,6 +60,8 @@
   &__menu {
     list-style-type: none;
     flex-shrink: 0;
+    transition: .2s background;
+
     & a {
       color: theme.$NEUTRAL_COLOR_DARK_GREY;
       transition: .2s color, .2s border-bottom;
@@ -54,6 +74,25 @@
         border-bottom: 2px solid color.change(theme.$NEUTRAL_COLOR_DARK_GREY, $lightness: 65%);
       }
     }
+
+    &--mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      flex-direction: column;
+      background: theme.$NEUTRAL_COLOR_WHITE;
+      z-index: 20;
+      display: flex;
+      animation: .2s show_menu;
+    }
+
+    &--removing {
+      animation: .2s close_menu;
+      animation-fill-mode: forwards;
+    }
+
     @include helpers.use-flex($gap: 45px, $break: "tablet") {
       display: flex;
     };
@@ -73,3 +112,4 @@
     }
   }
 }
+

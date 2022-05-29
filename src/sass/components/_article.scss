@@ -33,6 +33,10 @@
     }
   }
 
+  &__questions {
+    margin: 10px 0;
+  }
+
   &__date {
     @include helpers.use-font("SMALL_TEXT");
     color: $NEUTRAL_COLOR_DARK_GREY;

@@ -6,6 +6,7 @@
   height: 30px;
   position: relative;
   flex-shrink: 0;
+  z-index: 30;
 
   @include helpers.adaptive("tablet") {
     display: none;

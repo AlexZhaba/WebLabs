@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/index.css" media="all">
   <link rel="stylesheet" href="css/base/printer.css" media="print">
   <script src="js/index.js" defer></script>
+  <script src="js/tasks.js" defer></script>
   <title>ScriptDick</title>
 </head>
 <body>
@@ -102,6 +103,25 @@
             Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.
           </li>
         </ul>
+
+        <div class="article__questions accordeon">
+          <button class="accordeon__button heading-2" data-for="question_1">Question 1</button>
+          <div class="accordeon__body" id="question_1">
+            <span class="body-2">
+              Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.
+              Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.
+              Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.
+            </span>
+          </div>
+          <button class="accordeon__button heading-2" data-for="question_2">Question 2</button>
+          <div class="accordeon__body" id="question_2">
+            <span class="body-2">Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.</span>
+          </div>
+          <button class="accordeon__button heading-2" data-for="question_3">Question 3</button>
+          <div class="accordeon__body" id="question_3">
+            <span class="body-2">Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.</span>
+          </div>
+        </div>
         
         <div class="article__tags-list">
           <a class="article__tag" href="#">#HCI</a>
@@ -261,6 +281,13 @@
         </div>
       </div>
     </footer>
+    <aside class="toast" id="toast">
+      <div class="toast__container">
+        <span class="toast__title heading-2" id="toast__title">123</span>
+        <p class="toast__body body-1" id="toast__body"></p>
+        <button class="small-text toast__close" id="toast__close">Close</button>
+      </div>
+    </aside>
   </div>
 </body>
 </html>
