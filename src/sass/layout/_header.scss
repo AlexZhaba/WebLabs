@@ -62,13 +62,15 @@
     flex-shrink: 0;
     transition: .2s background;
 
-    & a {
+    & a, & span {
       color: theme.$NEUTRAL_COLOR_DARK_GREY;
       transition: .2s color, .2s border-bottom;
       padding-bottom: 8px;
       border-bottom: 2px solid #FFF;
       transform: translateY(4px);
+
       &:hover {
+        cursor: pointer;
         color: theme.$MAIN_COLOR_PRIMARY_2;
         transition: .2s color, .2s border-bottom;
         border-bottom: 2px solid color.change(theme.$NEUTRAL_COLOR_DARK_GREY, $lightness: 65%);

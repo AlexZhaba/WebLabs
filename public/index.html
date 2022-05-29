@@ -15,10 +15,10 @@
     <header class="header">
       <img src="assets/Logo.png" alt="" class="header__logo" srcset="assets/Logo-x2.png 2x">
       <nav class="header__navigation">
-        <ul class="header__menu">
+        <ul class="header__menu" id="header__menu">
           <li class="body-1"><a href="#">Corerage</a></li>
           <li class="body-1"><a href="#">Services</a></li>
-          <li class="body-1"><a href="#">Contact us</a></li>
+          <li class="body-1"><a id="modal-contact" href="#">Contact us</a></li>
           <li class="body-1"><a href="#">More</a></li>
         </ul>
         <div class="burger" id="burger">
@@ -287,6 +287,21 @@
         <p class="toast__body body-1" id="toast__body"></p>
         <button class="small-text toast__close" id="toast__close">Close</button>
       </div>
+    </aside>
+    <aside class="modal" id="modal">
+      <form class="modal__container" id="modal__container">
+        <label for="form_town" class="body-2">Город</label>
+        <input type="text" id="form_town" class="body-2 modal__input" minlength="5" maxlength="15" required>
+        <label for="form_date" class="body-2">Дата</label>
+        <input type="date" id="form_date" class="body-2 modal__input" required>
+        <label for="form_ticket_count" class="body-2">Количество билетов</label>
+        <input type="number" id="form_ticket_count" class="body-2 modal__input" required maxlength="1">
+        <select name="" id="form_ticket_type" class="body-2">
+          <option value="one">Билет в одну сторону</option>
+          <option value="two">Билет в обе стороны</option>
+        </select>
+        <button class="body-2">Отправить</button>
+      </form>
     </aside>
   </div>
 </body>

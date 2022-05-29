@@ -1,0 +1,45 @@
+@use "../theme" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s all;
+
+  &__container {
+    width: 500px;
+    padding: 10px 0;
+    border-radius: 20px;
+    background: $NEUTRAL_COLOR_WHITE;
+    transform: scale(0.8);
+    transition: .2s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__input {
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+    transition: .2s all;
+
+    .modal__container {
+      transform: scale(1);
+    }
+  }
+}

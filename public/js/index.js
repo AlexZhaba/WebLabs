@@ -45,3 +45,92 @@ setTimeout(() => {
     document.getElementById("toast").classList.remove("toast--show");
   })
 }, 2000);
+
+
+// modals
+const modal = document.getElementById("modal");
+
+modal.addEventListener("click", () => {
+  modal.classList.remove("modal--open");
+  document.getElementsByTagName("body").item(0).classList.remove("body--fixed");
+});
+document.getElementById("modal__container").addEventListener("click", (event) => event.stopPropagation())
+
+document.getElementById("modal-contact").addEventListener('click', function() {
+  modal.classList.add("modal--open");
+  document.getElementsByTagName("body").item(0).classList.add("body--fixed");
+});
+
+
+// modal-form
+
+function checkValidation(input) {
+  console.log("chekvalidation")
+  const validityState = input.validity;
+
+  if (validityState.valueMissing) {
+    console.log("valueMissing")
+    input.setCustomValidity('Это поле обязательно для заполнения!');
+  } else if (validityState.rangeOverflow) {
+    input.setCustomValidity('Thats too high!');
+  } else if (validityState.tooShort) {
+    console.log("tooShort");
+    input.setCustomValidity('Слишком короткое значение!');
+  } else if (validityState.tooLong) {
+    input.setCustomValidity('Слишком длинное значение!');
+  } else {
+    input.setCustomValidity('');
+  }
+
+  input.reportValidity();
+}
+
+const town = document.getElementById("form_town");
+const date = document.getElementById("form_date");
+const form_ticket_count = document.getElementById("form_ticket_count");
+const form = document.getElementById("modal__container");
+
+let isBlur = false;
+// town.addEventListener("blur", function(event) { checkValidation(this); isBlur = true });
+// town.addEventListener("input", function(event) { console.log("input"); this.setCustomValidity("") })
+// // date.addEventListener("blur", function(event) { checkValidation(this) });
+// town.addEventListener("invalid", function(event) {
+//   console.log("town");
+//   if (!isBlur) {
+//     console.log("event.preventDefault()");
+//     event.preventDefault();
+//   } else isBlur = false;
+// })
+
+
+function bindInput(input) {
+  let wasPrevented = false;
+  input.addEventListener("invalid", function(event) {
+    if (!wasPrevented) {
+      event.preventDefault();
+      wasPrevented = true;
+      checkValidation(this);
+      this.style.border = "1px solid red";
+    } else {
+    }
+  });
+  input.addEventListener("input", () => {
+    wasPrevented = false;
+    input.setCustomValidity("");
+    input.style.border = "1px solid black";
+    // input.reportValidity();
+  });
+};
+
+bindInput(town);
+bindInput(date);
+bindInput(form_ticket_count);
+
+
+form.addEventListener("submit", function(event) {
+  console.table({
+    town: town.value,
+    date: date.value,
+    form_ticket_count: form_ticket_count.value,
+  });
+})
