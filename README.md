@@ -3,30 +3,30 @@
 
 ### Хэдер
 ```
-  .header>.header__logo.logo+.header__menu>.header__link*2+.header__button.button.button--black>.button__text
+  header.header>img.header__logo.logo+nav.header__menu>a.header__link*2+button.header__button.button.button--black>span.button__text.text
 ```
 ![img.png](public/assets/images/header.png)
 
 ### Форма
 ```
-  .form>input.form__input[type="number"]+.button>.button__text
+  form.form>input.form__input[type="number"]+button.button>span.button__text.text
 ```
 ![img.png](public/assets/images/form.png)
 
 ### Карточка
 ```
-  .card>(.card__top-container>.card__icon+.card__title)+.card__subtitle
+  .card>(.card__top-container>img.card__icon+span.card__title)+p.card__subtitle
 ```
 ![img.png](public/assets/images/card.png)
 
 ### Футер
 ```
-  .footer>.footer__svg-image--left+.footer__svg-image--right+.footer__logo.logo+.footer__menu>(.footer__menu-column>.footer__column-title+.footer__link)+(.footer__menu-column>.footer__column-title+.footer__link*3)+(.footer__menu-column>.footer__column-title+.footer__link*3)+.footer__menu-column>.footer__column-title+.footer__link*3
+  footer.footer>img.footer__svg-image--left+img.footer__svg-image--right+img.footer__logo.logo+.footer__menu>(.footer__menu-column>span.footer__column-title+a.footer__link)+(.footer__menu-column>span.footer__column-title+a.footer__link*3)+(.footer__menu-column>span.footer__column-title+a.footer__link*3)+.footer__menu-column>span.footer__column-title+a.footer__link*3
 ```
 ![img.png](public/assets/images/footer.png)
 
 ### Главная страница
 ```
-  .section.main-page>.main-page__text.text--big.text--blue+.main-page__text.text--big+.main-page__button.button.button--arrow
+  section.section.main-page>span.main-page__text.text--big.text--blue.text+p.main-page__text.text--big.text+button.main-page__button.button.button--arrow
 ```
 ![img.png](public/assets/images/main-page.png)
